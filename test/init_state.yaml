@@ -1,0 +1,42 @@
+---
+access:
+- username: user
+  password: pswd
+  contract_id: 11_111111
+  scopes:
+  - 'pos.products:read'
+menus:
+- id: '1'
+  name: menu1
+  kana: ''
+  type: normal
+  categoryId: '1'
+  note: ''
+  sortNo: 1
+  customId:
+  applyDatetime:
+  isOpenPrice: false
+  createdIn: waiter
+  prices:
+  - taxRate: 10
+    taxType: normal
+    amount: '10'
+    tax: include
+    primary: true
+- id: '2'
+  name: menu2
+  kana: ''
+  type: normal
+  categoryId: '1'
+  note: ''
+  sortNo: 2
+  customId:
+  applyDatetime:
+  isOpenPrice: false
+  createdIn: waiter
+  prices:
+  - taxRate: 10
+    taxType: normal
+    amount: '100'
+    tax: include
+    primary: true
