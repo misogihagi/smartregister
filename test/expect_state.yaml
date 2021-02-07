@@ -1,0 +1,106 @@
+---
+access:
+- username: user
+  password: pswd
+  contract_id: 11_111111
+  scopes:
+  - 'pos.products:read'
+contract_db:
+- 11_111111:
+  - username: user
+  - username: user2
+
+menus:
+- id: '1'
+  name: menu1
+  kana: ''
+  type: normal
+  categoryId: '1'
+  note: ''
+  sortNo: 1
+  customId:
+  applyDatetime:
+  isOpenPrice: false
+  createdIn: waiter
+  prices:
+  - taxRate: 10
+    taxType: normal
+    amount: '10'
+    tax: include
+    primary: true
+- id: '2'
+  name: menu2
+  kana: ''
+  type: normal
+  categoryId: '1'
+  note: ''
+  sortNo: 2
+  customId:
+  applyDatetime:
+  isOpenPrice: false
+  createdIn: waiter
+  prices:
+  - taxRate: 10
+    taxType: normal
+    amount: '100'
+    tax: include
+    primary: true
+check_in:
+  id: '1'
+  tables:
+  - id: '1'
+    name: T1
+  number: 1
+  customerGroups: []
+  status: started
+  started: '2000-01-01T00:00:00+00:00'
+  ended:
+  storeId: '1'
+  quantity: 0
+  totalPrice: '0'
+  temmpTransactionHeadId:
+or:
+  orderId: 01XXXXXYYYYYZZZZZZ
+  ordered: '2000-01-01T00:00:00+00:00'
+  items:
+  - id: '1'
+    menuId: '1'
+    name: menu1
+    quantity: 5
+    status: waiting
+    customContentId: ''
+    customContentName: ''
+    categoryId: '1'
+    menuType: normal
+    memo: ''
+    sellingPrice:
+      taxRate: 10
+      taxType: noarmal
+      amount: '0'
+      tax: included
+    discount:
+    toppings: []
+  - id: '2'
+    menuId: '2'
+    name: menu2
+    quantity: 5
+    status: waiting
+    customContentId: ''
+    customContentName: ''
+    categoryId: '1'
+    menuType: normal
+    memo: ''
+    sellingPrice:
+      taxRate: 10
+      taxType: normal
+      amount: 44t4
+      tax: included
+    discount:
+    toppings: []
+  tableUse:
+    id: '1'
+    status: started
+    storeId: '1'
+    tables:
+    - id: '1'
+      name: T1
