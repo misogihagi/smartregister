@@ -1,8 +1,10 @@
 import unittest
-from ..beruga import Client
+import sys
+import yaml
+from beluga import Client
 
 try:
-    with open('expect_state.yaml') as file:
+    with open('test/expect_state.yaml') as file:
         expect_state = yaml.safe_load(file)
 except Exception as e:
     print('Exception occurred while loading YAML...', file=sys.stderr)
@@ -43,7 +45,7 @@ class TestBeruga(unittest.TestCase):
       }, {
           'menuId': '2',
           'quantity': 5
-      }]}
+      }]
     }
     self.assertEqual(expect_state['menus'], self.client.order(self.store, params))
 
