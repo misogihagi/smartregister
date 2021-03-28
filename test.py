@@ -33,7 +33,7 @@ class TestBeruga(unittest.TestCase):
       'number': 1,
     }
     result=self.client.check_in(params)
-    self.store=result['storeId']
+    self.store=result['id']
     self.assertEqual(expect_state['menus'], result)
 
   def test_order(self):
