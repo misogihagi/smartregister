@@ -9,7 +9,7 @@ debug = False
 class Client:
     def __init__(self,
                  smrg_access_key_id: str, smrg_secret_access_key: str,
-                 contract_id: str, scopes: Iterable,
+                 contract_id: str, scopes=[],
                  grant_type='client_credentials', scope='', development=True):
         if debug == True:
             url = "{}/app/{}/token".format('http://localhost:8080',
@@ -21,6 +21,8 @@ class Client:
             endhost = 'https://api.smaregi.{}'.format(
                 'dev' if development else 'jp')
         self._endpoint = "{}/{}/".format(endhost, contract_id)
+        if len(scopes) == 0 and scope == '':
+            raise Exception('no scopes!')
         params = urllib.parse.urlencode({
             'grant_type': grant_type,
             'scope': scope or ' '.join(scopes)
