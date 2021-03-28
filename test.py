@@ -36,7 +36,7 @@ class TestBeruga(unittest.TestCase):
     self.store=result['storeId']
     self.assertEqual(expect_state['menus'], result)
 
-  def test_check_in(self):
+  def test_order(self):
     params = {
       'items':
       [{
